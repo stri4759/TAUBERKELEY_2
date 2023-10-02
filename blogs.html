@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+
+<html>
+<link rel="stylesheet" href="indexstyle.css">
+
+<head lang="en-US">
+	<title>TAU Berkeley</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <!-- Script for including Navigation Bar and footer files-->
+		<script>
+			function includeHTML() {
+			  var z, i, elmnt, file, xhttp;
+			  /*loop through a collection of all HTML elements:*/
+			  z = document.getElementsByTagName("*");
+			  for (i = 0; i < z.length; i++) {
+				elmnt = z[i];
+				/*search for elements with a certain attribute:*/
+				file = elmnt.getAttribute("w3-include-html");
+				if (file) {
+				  /*make an HTTP request using the attribute value as the file name:*/
+				  xhttp = new XMLHttpRequest();
+				  xhttp.onreadystatechange = function () {
+					if (this.readyState == 4) {
+					  if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+					  if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+					  /*remove the attribute, and call this function once more:*/
+					  elmnt.removeAttribute("w3-include-html");
+					  includeHTML();
+					}
+				  }
+				  xhttp.open("GET", file, true);
+				  xhttp.send();
+				  /*exit the function:*/
+				  return;
+				}
+			  }
+			};
+		</script>
+	</head>
+	
+	<body>
+				<!-- Navigation Bar-->
+  					<div w3-include-html="navbar.html"></div>
+				<br><br><br><br><br><br><br>
+				<!-- Body -->
+					<div>
+						<br><br>
+						<h2> This weeks blog</h2>
+						<p style="width: 80%; padding:10px; background-color:rgba(0, 0, 0, 0.5); color:white; margin-left: auto; margin-right: auto;">
+							&nbsp; &nbsp; The main concern in today's world is saving lives from diseases like brain tumors. Modern technology has brought 
+							us a way to do this using artificial intelligence (AI) and special medical pictures called "MRIs". These pictures help doctors 
+							see inside our bodies, and AI helps them find problems.
+							<br><br>
+							&nbsp; &nbsp; Think of AI as a smart computer program that can look at these pictures and tell if something is wrong, like a 
+							brain tumor. This works because AI learns from a lot of examples and gets really good at spotting issues. One special type of 
+							AI is called a "convolutional neural network" or CNN. It's like a super-smart detective for pictures, especially in medicine.
+							<br><br>														
+							&nbsp; &nbsp;The first step is to teach AI by showing it many pictures where doctors have marked the problem areas. This teaching 
+							takes a lot of time, and then the AI needs more time to practice on its own. This can be tricky because the AI has settings that 
+							need to be just right for it to work well.
+							<br><br>
+							&nbsp; &nbsp;When the AI is ready, it can look at new MRI pictures and quickly say if there's a problem. This helps doctors make 
+							better decisions and catch issues early. But using AI in medicine has some challenges. Sometimes, AI makes mistakes, so it's 
+							important for a doctor to also check. This teamwork can improve accuracy.
+							<br><br>
+							&nbsp; &nbsp;Another challenge is that medical pictures are complex. Sometimes, different types of pictures are needed, and AI 
+							needs to handle all of them. Also, sharing these pictures while keeping people's privacy safe is important for research.
+							<br><br>
+							&nbsp; &nbsp;For the future, we can make AI even better. We can teach it using examples from existing data, and this can save time. 
+							Also, using AI that has already learned from other problems can speed things up and make the results more accurate.
+							<br><br>
+							&nbsp; &nbsp;In the end, this article shows that AI and special pictures (MRIs) are helping doctors find brain tumors and other 
+							issues. Even though there are challenges, like making sure AI is accurate and keeping information safe, we're moving towards a 
+							future where AI and doctors work together to keep us healthy.	
+						</p>
+						<br>
+						<!-- Pages-->
+						<footer>
+						<div class="pagination" style="left: 170px; position:absolute;">
+							<a href="#" class="previous">Prev</a>
+							<a href="#" class="page active">1</a>
+							<a href="#" class="page">2</a>
+							<a href="#" class="page">3</a>
+							<span class="extra">&hellip;</span>
+							<a href="#" class="page">8</a>
+							<a href="#" class="page">9</a>
+							<a href="#" class="page">10</a>
+							<a href="#" class="next">Next</a>
+						</div>
+						</footer>
+						<br><br>
+					</div>
+					<br><br><br><br><br><br><br>
+				<!--Footer-->
+				<div w3-include-html="footerfile.html"></div>
+
+	<script> includeHTML(); </script>
+	</body>
+</html>

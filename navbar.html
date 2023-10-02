@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<link rel="stylesheet" href="indexstyle.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Navigation</title>
+
+    <style>
+        <!-- For Navigation Bar-->
+        /* Create a top navigation bar with a black background color  */
+        .topnav {
+            background-color:rgba(100,100,255,0.1);
+            color: black;
+        }
+
+        /* Style the links inside the navigation bar */
+        .topnav a {
+        float: left;
+        color: black;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 24px;
+        }
+
+        /* Change the color of links on hover */
+        .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+        }
+
+        /* Create a right-aligned (split) link inside the navigation bar */
+        .topnav a.split {
+        float: right;
+        font-size:30px;
+        margin:10px;
+        }
+        /* Style all font awesome icons */
+        .fa {
+            text-align: center;
+            text-decoration: none;
+            margin: 10px 10px;
+        }
+
+        /* Add a hover effect if you want */
+        .fa:hover {
+            opacity: 0.7;
+        }
+
+        /* Set a specific color for each brand */
+
+        /* Facebook */
+        .fa-facebook {
+            background: #3B5998;
+            color: white;
+        }
+
+        /* Twitter */
+        .fa-twitter {
+            background: #55ACEE;
+            color: white;
+        }
+
+        /* Instagram */
+        .fa-instagram {
+            background: #125688;
+            color: white;        
+        }
+
+        /*Youtube */
+        .fa-youtube {
+            background: #bb0000;
+            color: white;            
+        }
+        html{
+            height: 100%;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            scroll-behavior: smooth;
+      }
+    </style>
+    
+</head>
+
+<body>
+    <div class="topnav">
+        <a class="active" href="index.html">TAU</a>
+        <a href="mission.html">Our Mission</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="tools.html">Tools</a>
+        <a href="blogs.html">Our Blog</a>
+        <a href="newsletter.html">Newsletter</a>
+        <a href="contactus.html">Contact Us</a>
+        <a href="workinprogress.html" class="split fa fa-facebook"></a>
+        <a href="workinprogress.html" class="split fa fa-twitter"></a>
+        <a href="workinprogress.html" class="split fa fa-instagram"></a>
+        <a href="workinprogress.html" class="split fa fa-youtube"></a>
+      </div>
+</body>
+
+</html>
