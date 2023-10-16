@@ -22,13 +22,15 @@
         /* Style the navigation bar */
         .navbar {
             background-color: rgba(255,255,255,0.1); /* Background color for the navbar */
-            overflow: hidden;
+            position:sticky;
+            top: 0; /* Stick to the top of the viewport */
+            z-index: 100; /* Ensure it's above other content */
         }
 
         /* Style the navigation bar list */
         .navbar ul {
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
             align-items: center;
             padding: 10px;
         }
@@ -125,6 +127,5 @@
         </li>
     </ul>
 </nav>
-    </body>
-
+</body>
 </html>
