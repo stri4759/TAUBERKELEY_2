@@ -7,48 +7,13 @@
 	<title>TAU Berkeley</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-
-    <!-- Script for including Navigation Bar and footer files-->
-		<script>
-			function includeHTML() {
-			  var z, i, elmnt, file, xhttp;
-			  /*loop through a collection of all HTML elements:*/
-			  z = document.getElementsByTagName("*");
-			  for (i = 0; i < z.length; i++) {
-				elmnt = z[i];
-				/*search for elements with a certain attribute:*/
-				file = elmnt.getAttribute("w3-include-html");
-				if (file) {
-				  /*make an HTTP request using the attribute value as the file name:*/
-				  xhttp = new XMLHttpRequest();
-				  xhttp.onreadystatechange = function () {
-					if (this.readyState == 4) {
-					  if (this.status == 200) { elmnt.innerHTML = this.responseText; }
-					  if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
-					  /*remove the attribute, and call this function once more:*/
-					  elmnt.removeAttribute("w3-include-html");
-					  includeHTML();
-					}
-				  }
-				  xhttp.open("GET", file, true);
-				  xhttp.send();
-				  /*exit the function:*/
-				  return;
-				}
-			  }
-			};
-		</script>
-	</head>
+</head>
 	
 	<body>
-				<!-- Navigation Bar-->
-  					<div w3-include-html="navbar.html"></div>
-				<br><br><br><br><br><br><br>
 				<!-- Body -->
-					<div>
-						<br><br>
+					<div class="backdrop">
 						<h2> Mission of Tau Berkeley</h2>
-						<p style="width: 80%; padding:10px; background-color:rgba(0, 0, 0, 0.5); color:white; margin-left: auto; margin-right: auto;">
+						<p style="width: 90%; margin-left: auto; margin-right: auto;">
 							Our mission at Tau Berkeley is to support individuals in their fight 
 							against neurodegenerative diseases by providing engaging and innovative 
 							games that stimulate cognitive function and delay disease progression. 
@@ -58,7 +23,7 @@
 						</p>
 						<br><br>
 						<h2> Goal of Tau Berkeley</h2>
-						<p style="width: 80%; padding:10px; background-color:rgba(0,0,0,0.5);  color:white; margin-left: auto; margin-right: auto;">
+						<p style="width: 90%; margin-left: auto; margin-right: auto;">
 							Additionally, Tau Berkeley is dedicated to spreading awareness about 
 							neurology problems through insightful articles, educational resources, 
 							and community engagement. We strive to foster a greater understanding 
@@ -67,7 +32,7 @@
 						</p>
 						<br><br>
 						<h2> Vision of Tau Berkeley</h2>
-						<p style="width: 80%; padding:10px; background-color:rgba(0,0,0,0.5);  color:white; margin-left: auto; margin-right: auto;">									
+						<p style="width: 90%; margin-left: auto; margin-right: auto;">									
 							By combining the power of play and knowledge, we are committed to making 
 							a positive impact on the lives of individuals affected by neurodegenerative 
 							diseases, empowering them to lead fuller, more independent lives. Our vision 
@@ -75,10 +40,6 @@
 							and neurological challenges are met with knowledge, compassion, and hope.
 						</p>
 					</div>
-					<br><br><br><br><br><br><br>
-				<!--Footer-->
-				<div w3-include-html="footerfile.html"></div>
 
-	<script> includeHTML(); </script>
 	</body>
 </html>
