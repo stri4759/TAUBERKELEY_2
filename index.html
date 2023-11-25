@@ -1,91 +1,82 @@
 <!DOCTYPE HTML>
+<html lang="en-US">
 
-<html>
-<link rel="stylesheet" href="indexstyle.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+    <title>TAU Berkeley</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="indexstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
 
-<head lang="en-US">
-	<title>TAU Berkeley</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<body>
 
-    <!-- Script for including Navigation Bar and footer files-->
-		<script>
-			function includeHTML() {
-			  var z, i, elmnt, file, xhttp;
-			  /*loop through a collection of all HTML elements:*/
-			  z = document.getElementsByTagName("*");
-			  for (i = 0; i < z.length; i++) {
-				elmnt = z[i];
-				/*search for elements with a certain attribute:*/
-				file = elmnt.getAttribute("w3-include-html");
-				if (file) {
-				  /*make an HTTP request using the attribute value as the file name:*/
-				  xhttp = new XMLHttpRequest();
-				  xhttp.onreadystatechange = function () {
-					if (this.readyState == 4) {
-					  if (this.status == 200) { elmnt.innerHTML = this.responseText; }
-					  if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
-					  /*remove the attribute, and call this function once more:*/
-					  elmnt.removeAttribute("w3-include-html");
-					  includeHTML();
-					}
-				  }
-				  xhttp.open("GET", file, true);
-				  xhttp.send();
-				  /*exit the function:*/
-				  return;
-				}
-			  }
-			};
-		</script>
-	</head>
-	
-	<body>
-				<!-- Navigation Bar-->
-  					<!--<div w3-include-html="navbar.html"></div>-->
-					  <nav class="navbar">
-						<ul>
-							
-							<li ><a style=" font-family:'Exo', sans-serif;" href="index.html">TAU</a></div></li>
-							<li ><a style=" font-family:'Exo', sans-serif;" href="aboutus.html">About Us</a></li>
-							<li ><a style=" font-family:'Exo', sans-serif;" href="tools.html">Games</a></li>
-							<li  ><a style=" font-family:'Exo', sans-serif;" href="blogs.html">Our Blog</a></li>
-							<li></li>
-							<li></li>
-							<li></li> 
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li >
-								<a href="workinprogress.html" class="split fa fa-facebook"></a>
-								<a href="workinprogress.html" class="split fa fa-instagram"></a>
-								<a href="workinprogress.html" class="split fa fa-linkedin"></a>
-								<a href="workinprogress.html" class="split fa fa-youtube"></a>
-							</li>
-						</ul>
-					</nav>
-				<!-- Logo -->
-					<div>
-						<img src="html5up-massively/images/Greek_lc_tau.svg.png" alt="Tau" style="margin:auto;padding-left:500px; margin-bottom: 0px;">
-					</div>
-					
-					<h1 style="font-family: 'Courier New', Courier, monospace; text-align: center; font-size: 26px; color: black; width: 50%; margin-left: 25%; margin-right:auto;">Empowering people in the fight against neurodegenerative diseases through innovative brain-training games and comprehensive education</h1>
-					<br>
-				<!-- Mission and Values-->
-				<div w3-include-html="mission.html"></div>
-				<br>
-				<div class="center">
-					<a href="tools.html" class="button" style="color:white">Games</a>
-					<a href="tools.html" class="button" style="color:white">Blog</a>
-				</div>
-				<div class="center">
-					<a href="contactus.html" class="button" style="color:white">Contact Us</a>
-				</div>
-				<!--Footer-->
-				<div w3-include-html="footerfile.html"></div>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">TAU</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="tools.html">Games</a></li>
+            <li><a href="blogs.html">Our Blog</a></li>
+            <li class="split">
+                <a href="workinprogress.html" class="fa fa-facebook"></a>
+                <a href="workinprogress.html" class="fa fa-instagram"></a>
+                <a href="workinprogress.html" class="fa fa-linkedin"></a>
+                <a href="workinprogress.html" class="fa fa-youtube"></a>
+            </li>
+        </ul>
+    </nav>
 
-	<script> includeHTML(); </script>
-	</body>
+    <!-- Logo -->
+    <div class="center">
+        <img src="html5up-massively/images/Greek_lc_tau.svg.png" alt="Tau">
+    </div>
+
+    <h1 style="font-family: 'Courier New', Courier, monospace; text-align: center; font-size: 26px; color: black; width: 80%; margin: 0 auto;">Empowering people in the fight against neurodegenerative diseases through innovative brain-training games and comprehensive education</h1>
+
+    <!-- Mission and Values-->
+    <div w3-include-html="mission.html"></div>
+
+    <div class="center">
+        <a href="tools.html" class="button">Games</a>
+        <a href="tools.html" class="button">Blog</a>
+    </div>
+    <div class="center">
+        <a href="contactus.html" class="button">Contact Us</a>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer" w3-include-html="footerfile.html"></div>
+
+    <script>
+        function includeHTML() {
+            var z, i, elmnt, file, xhttp;
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                file = elmnt.getAttribute("w3-include-html");
+                if (file) {
+                    xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4) {
+                            if (this.status == 200) {
+                                elmnt.innerHTML = this.responseText;
+                            }
+                            if (this.status == 404) {
+                                elmnt.innerHTML = "Page not found.";
+                            }
+                            elmnt.removeAttribute("w3-include-html");
+                            includeHTML();
+                        }
+                    }
+                    xhttp.open("GET", file, true);
+                    xhttp.send();
+                    return;
+                }
+            }
+        };
+        includeHTML();
+    </script>
+</body>
+
 </html>
