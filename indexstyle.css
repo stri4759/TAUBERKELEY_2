@@ -1377,7 +1377,7 @@ input[type="radio"]:focus + label:before {
   .button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: darkblue; /* Button background color */
+    background-color: rgb(177, 177, 239); /* Button background color */
     color: #fff; /* Button text color */
     text-decoration: none; /* Remove default underline for links */
     border: none;

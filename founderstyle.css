@@ -4,11 +4,10 @@
   }
   
   body {
-    
-    background-color: rgba(252, 245, 236, 0.3);
-    background-image: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)), url('assets/colormap_gujarat.jpg');
+    background-color: rgb(0, 0, 0);
+    background-image: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,0)), url('html5up-massively/images/bg.jpg'); 
+    background-size: cover;
     background-repeat: no-repeat;
-    background-size: 60%;
     background-attachment: fixed;
     background-position: center;
     /*
@@ -18,8 +17,6 @@
     background-position: center;
 */
  }
-  
-  
   
   /* style member component */
   .list-members {
@@ -213,9 +210,9 @@ li a:visited {
   color: aliceblue;
 }
 h1 {
-  color: rgba(0, 0, 0, 1);
+  color: rgb(255, 255, 255);
   font-size: 500%;
-  font-family: fantasy;
+  font-family:  'Exo', sans-serif;
   text-align: center;
 }
 
@@ -242,3 +239,4 @@ h3 {
   color: white;
   text-align: center;
 }
+
